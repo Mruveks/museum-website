@@ -6,7 +6,7 @@ import Homepage from './pages/Homepage'
 function App() {
 
   return (
-    <div>
+    <div className="text-black">
       <Navbar/>
       <Homepage/>
     </div>

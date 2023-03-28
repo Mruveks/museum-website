@@ -14,33 +14,33 @@ const ExhibitionTable = ({ data }) => {
   };
 
   return (
-    <div className="relative">
+    <article className="relative">
       <div
-        className="overflow-x-hidden whitespace-nowrap -mx-4 py-4 -mb-4 scroll-hidden"
+        className="overflow-x-hidden whitespace-nowrap py-4 scroll-hidden"
         ref={containerRef}
       >
         {data.map((exhibition) => (
-          <div className="inline-block px-4" key={exhibition.id}>
-            <img src={exhibition.image} alt={exhibition.title} className="w-auto h-[24.5rem] object-fit" />
+          <section className="inline-block" key={exhibition.id}>
+            <img src={exhibition.image} alt={exhibition.title} className="w-auto h-64 object-cover pr-16" />
             <div className="mt-2">{exhibition.title}</div>
-          </div>
+          </section>
         ))}
       </div>
       <button
-        className="absolute top-1/2 -left-10 transform -translate-y-1/2 z-10 bg-red-800 hover:bg-gray-300 px-3 py-1 rounded-full focus:outline-none"
-        onClick={() => handleScroll(-620)}
+        className="absolute top-1/2 -left-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-3 py-6 rounded-full focus:outline-none"
+        onClick={() => handleScroll(-400)}
         disabled={scrollLeft === 0}
       >
         {"<"}
       </button>
       <button
-        className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 bg-red-800 hover:bg-gray-300 px-3 py-1 rounded-full focus:outline-none"
-        onClick={() => handleScroll(620)}
+        className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-2 py-6 rounded-full focus:outline-none"
+        onClick={() => handleScroll(400)}
         disabled={containerRef.current && scrollLeft === containerRef.current.scrollWidth - containerRef.current.clientWidth}
       >
         {">"}
       </button>
-    </div>
+    </article>
   );
 };
 
