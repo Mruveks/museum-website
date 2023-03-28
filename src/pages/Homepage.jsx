@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import museumvideo from '../assets/museum-video.mp4';
 import ExhibitionTable from '../components/ExhibitionTable';
 import Card from '../components/Card';
-
+import Footer from "../components/Footer";
 import ex1 from '../assets/ex1.jpg'
 import ex2 from '../assets/ex2.jpg'
 import ex3 from '../assets/ex3.jpg'
@@ -64,6 +64,7 @@ const Homepage = () => {
           {/* Add paginations */}
         </div>
       </article>
+      <Footer/>
     </div>
   );
 };
