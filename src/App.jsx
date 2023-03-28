@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import './App.css'
-import styles from './styles'
 import Navbar from './components/Navbar'
+import Homepage from './pages/Homepage'
 
 function App() {
 
   return (
     <div>
       <Navbar/>
-      <div>Hello</div>
+      <Homepage/>
     </div>
   )
 }
