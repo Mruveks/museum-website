@@ -29,7 +29,7 @@ const Navbar = () => {
 
       <ul className="flex justify-start space-x-20 text-xl">
         <li
-          className="relative p-4 mx-2 text-gray-900 font-medium cursor-pointer hover:underline decoration-2"
+          className="relative my-4 mx-2 text-gray-900 font-medium cursor-pointer hover-underline-animation decoration-2"
           onMouseEnter={() => handleMouseEnter(1)}
           onMouseLeave={() => handleMouseLeave()}
         >
@@ -60,7 +60,7 @@ const Navbar = () => {
           )}
         </li>
         <li
-          className="relative mx-2 p-4 text-gray-900 font-medium cursor-pointer hover:underline decoration-2"
+          className="relative mx-2 my-4 text-gray-900 font-medium cursor-pointer hover-underline-animation decoration-2"
           onMouseEnter={() => handleMouseEnter(2)}
           onMouseLeave={() => handleMouseLeave()}
         >
@@ -82,7 +82,7 @@ const Navbar = () => {
           )}
         </li>
         <li
-          className="relative mx-2 p-4 text-gray-900 font-medium cursor-pointer hover:underline decoration-2"
+          className="relative mx-2 my-4 text-gray-900 font-medium cursor-pointer hover-underline-animation decoration-2"
           onMouseEnter={() => handleMouseEnter(3)}
           onMouseLeave={() => handleMouseLeave()}
         >
@@ -104,7 +104,7 @@ const Navbar = () => {
           )}
         </li>
         <li
-          className="relative mx-2 p-4 text-gray-900 font-medium cursor-pointer hover:underline decoration-2" 
+          className="relative mx-2 my-4 text-gray-900 font-medium cursor-pointer hover-underline-animation decoration-2" 
           onMouseEnter={() => handleMouseEnter(4)}
           onMouseLeave={() => handleMouseLeave()}
         >
@@ -132,7 +132,7 @@ const Navbar = () => {
           )}
         </li>
         <li
-          className="relative mx-2 p-4 text-gray-900 font-medium cursor-pointer hover:underline decoration-2"
+          className="relative mx-2 my-4 text-gray-900 font-medium cursor-pointer hover-underline-animation decoration-2"
           onMouseEnter={() => handleMouseEnter(5)}
           onMouseLeave={() => handleMouseLeave()}
         >
@@ -147,7 +147,7 @@ const Navbar = () => {
             </div>
           )}
         </li>
-        <li className="relative mx-2 p-4 text-gray-900 font-medium cursor-pointer hover:underline decoration-2">
+        <li className="relative mx-2 my-4 text-gray-900 font-medium cursor-pointer hover-underline-animation decoration-2">
           Shop
         </li>
       </ul>
