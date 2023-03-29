@@ -27,7 +27,7 @@ const Navbar = () => {
         </ul>
       </div>
 
-      <ul className="flex justify-start space-x-20">
+      <ul className="flex justify-start space-x-20 text-xl">
         <li
           className="relative p-4 mx-2 text-gray-900 font-medium cursor-pointer hover:underline decoration-2"
           onMouseEnter={() => handleMouseEnter(1)}

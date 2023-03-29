@@ -11,18 +11,6 @@ const exhibitions = [
   { id: 1, title: 'Exhibition 1', image: ex1 },
   { id: 2, title: 'Exhibition 2', image: ex2 },
   { id: 3, title: 'Exhibition 3', image: ex3 },
-  { id: 4, title: 'Exhibition 4' },
-  { id: 5, title: 'Exhibition 5' },
-  { id: 1, title: 'Exhibition 1' },
-  { id: 2, title: 'Exhibition 2' },
-  { id: 3, title: 'Exhibition 3' },
-  { id: 4, title: 'Exhibition 4' },
-  { id: 5, title: 'Exhibition 5' },
-  { id: 1, title: 'Exhibition 1' },
-  { id: 2, title: 'Exhibition 2' },
-  { id: 3, title: 'Exhibition 3' },
-  { id: 4, title: 'Exhibition 4' },
-  { id: 5, title: 'Exhibition 5' },
 ];
 
 const Homepage = () => {
