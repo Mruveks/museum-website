@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -69,7 +70,7 @@ const Navbar = () => {
             <div className="absolute z-40 text-gray-900 w-max left-0 top-full bg-red-400 shadow-lg">
               <ul>
                 <li className="hover:bg-red-500 p-2">
-                  <a href="#">Exhabitions</a>
+                  <NavLink to="/exhibitions">Exhabitions</NavLink>
                 </li>
                 <li className="hover:bg-red-500 p-2">
                   <a href="#">Events and Tours</a>
