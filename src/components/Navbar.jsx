@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import { MdMuseum } from 'react-icons/md'
 
 const Navbar = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -13,22 +14,27 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="w-full bg-red-400 px-20">
+    <nav className="w-full bg-red-600 px-20">
+
       <div className="flex justify-end">
-        <ul className="flex space-x-4 text-gray-900 hover:text-gray-600 font-medium cursor-pointer items-center">
-          <li>
+        <ul className="flex text-gray-900  font-medium cursor-pointer items-center">
+          <li className="hover:text-gray-200 px-2 border-r border-black">
             Buy Tickets
           </li>
-          <li>
+          <li className="hover:text-gray-200 px-2 border-r border-black">
             Become a Member
           </li>
-          <li>
+          <li className="hover:text-gray-200 pl-2 ">
             Make A Donation
           </li>
         </ul>
       </div>
 
+      
       <ul className="flex justify-start space-x-20 text-xl">
+        <li className="relative my-4 mx-2 text-gray-900 font-medium cursor-pointer hover:text-white rounded-lg">
+          <NavLink to="/" ><MdMuseum size={30} /></NavLink>
+        </li>
         <li
           className="relative my-4 mx-2 text-gray-900 font-medium cursor-pointer hover-underline-animation decoration-2"
           onMouseEnter={() => handleMouseEnter(1)}
@@ -36,22 +42,22 @@ const Navbar = () => {
         >
           <a href="#">Visit</a>
           {activeMenu === 1 && (
-            <div className="absolute z-40 text-gray-900 w-max left-0 top-full bg-red-400 shadow-lg">
+            <div className="absolute z-40 pt-4 text-gray-900 w-max left-0 top-full bg-red-600 shadow-lg">
               <ul>
                 <li className="hover:bg-red-500 p-2">
-                  <a href="#">Plan Your Visit</a>
+                  <NavLink to="/visit/plan-your-visit">Plan Your Visit</NavLink>
                 </li>
                 <li className="hover:bg-red-500 p-2">
-                  <a href="#">Buy Tickets</a>
+                  <NavLink to="/visit/buy-tickets">Buy Tickets</NavLink>
                 </li>
                 <li className="hover:bg-red-500 p-2">
-                  <a href="#">Become a Member</a>
+                  <NavLink to="/visit/membership">Become a Member</NavLink>
                 </li>
                 <li className="hover:bg-red-500 p-2">
                   <a href="#">Museum Map</a>
                 </li>
                 <li className="hover:bg-red-500 p-2">
-                  <a href="#">Food and Drink</a> 
+                  <NavLink to="/visit/dining">Food and Drink</NavLink> 
                 </li>
                 <li className="hover:bg-red-500 p-2">
                   <a href="#">Accessibility</a>
@@ -67,7 +73,7 @@ const Navbar = () => {
         >
           <a href="#">Exhibitions and Events</a>
           {activeMenu === 2 && (
-            <div className="absolute z-40 text-gray-900 w-max left-0 top-full bg-red-400 shadow-lg">
+            <div className="absolute z-40 pt-4 text-gray-900 w-max left-0 top-full bg-red-600 shadow-lg">
               <ul>
                 <li className="hover:bg-red-500 p-2">
                   <NavLink to="/exhibitions">Exhabitions</NavLink>
@@ -89,7 +95,7 @@ const Navbar = () => {
         >
           <a href="#">Art</a>
           {activeMenu === 3 && (
-            <div className="absolute z-40 text-gray-900 w-max left-0 top-full bg-red-400 shadow-lg">
+            <div className="absolute z-40 pt-4 text-gray-900 w-max left-0 top-full bg-red-600 shadow-lg">
               <ul>
                 <li className="hover:bg-red-500 p-2">
                   <a href="#">Collection</a>
@@ -110,8 +116,8 @@ const Navbar = () => {
           onMouseLeave={() => handleMouseLeave()}
         >
           <a href="#">Learn with Us</a>
-          {activeMenu === 4 && (
-            <div className="absolute z-40 text-gray-900 w-max left-0 top-full bg-red-400 shadow-lg">
+          {activeMenu === 4 && ( 
+            <div className="absolute z-40 pt-4 text-gray-900 w-max left-0 top-full bg-red-600 shadow-lg">
               <ul>
                 <li className="hover:bg-red-500 p-2">
                   <a href="#">Learning Resources</a>
@@ -139,7 +145,7 @@ const Navbar = () => {
         >
           <a href="#">Research</a>
           {activeMenu === 5 && (
-            <div className="absolute z-40 text-gray-900 w-max left-0 top-full bg-red-400 shadow-lg">
+            <div className="absolute z-40 pt-4 text-gray-900 w-max left-0 top-full bg-red-600 shadow-lg">
               <ul>
                 <li className="hover:bg-red-500 p-2">
                   <a href="#">Libraries and Research Centers</a>
