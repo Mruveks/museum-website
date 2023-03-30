@@ -9,11 +9,11 @@ const BecomeAMember = () => {
       <article className="h-fit w-full grid grid-cols-2">
         <div className="p-24">
           <header className="text-6xl font-bold">Membership Starts Here</header>
-          <div className="space-y-4 py-10 text-xl">
-            <p>Membership at The Met offers a rich variety of specialized benefits that give you a deeper connection with the art in our galleries. From free admission and guest passes on every visit, to Member Preview Days for new exhibitions and discounts on dining and shopping, it’s all waiting for you as a Member. Choose the level that inspires you below. </p>
-            <p>Every week, Members and their guest(s) are invited to see the newest exhibitions before the Museum opens to the public during Member Morning Hours, Thursdays, from 9 to 10 am.</p>
-            <p>Planning your visit? Your Member card is your ticket! No advance reservations or timed tickets are required. Use the Member entrance at 81st Street and Fifth Avenue. Once inside, present your Membership card and proceed directly to the Museum galleries and enjoy!</p>
-            <p>We've streamlined your admission experience! Members no longer need an advance reservation to ensure Museum entry. Simply show up with your Membership information.</p>
+          <div className="space-y-4 pr-12 py-10 text-xl">
+            <p>As a valued Member, you'll enjoy free admission to exhibits, bring a guest every visit, Member Preview Days, and unbeatable discounts on dining and shopping. Choose a membership level that speaks to your passion and love for the arts.</p>
+            <p>Experience exclusive access to our newest exhibitions before the public with your guest(s) during our Thursday morning Member Hour from 9 to 10 am as a valued Member of The Museum.</p>
+            <p>When planning your visit to The Museum, simply bring your Member card as your ticket to access our galleries. No advanced reservations or timed tickets are necessary. Head to the Member entrance located at 81st Street and Fifth Avenue, and upon arrival, present your Membership card for immediate entry into the Museum galleries. It's that easy to enjoy all that The Museum has to offer as a valued Member.</p>
+            <p>Good news for Members - we've made your admission experience even easier! You no longer need to make an advance reservation to enter the Museum. Simply show up with your Membership information and you'll be granted access. It's that simple!</p>
           </div>
         </div>
         <div>
