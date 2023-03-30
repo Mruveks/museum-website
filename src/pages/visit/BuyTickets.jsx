@@ -10,7 +10,6 @@ const BuyTickets = () => {
   const [dateState, setDate] = useState('')
   const [today, setToday] = useState("")
   const [tomorrow, setTomorrow] = useState("")
-  const [cart, setCart] = useState(0)
 
   const [tickets, setTickets] = useState(0)
   const [ticket1, setTicket1] = useState(0)
@@ -18,7 +17,6 @@ const BuyTickets = () => {
   const [ticket3, setTicket3] = useState(0)
   const [ticket4, setTicket4] = useState(0)
   const [ticketsNumber, setTicketsNumber] = useState(0)
-
 
   const prices = [
     { price: 30 },
@@ -33,6 +31,7 @@ const BuyTickets = () => {
     setDate(num)
     console.log(selectedDate)
   }
+  
   function handleDatePickerChange(date) {
     setSelectedDate(date);
     setSelectedDatePicker(date);
