@@ -2,6 +2,7 @@ import React from "react";
 import museumvideo from '../assets/museum-video.mp4';
 import ExhibitionTable from '../components/ExhibitionTable';
 import Card from '../components/Card';
+import { Link } from "react-router-dom";
 
 import ex1 from '../assets/ex1.jpg'
 import ex2 from '../assets/ex2.jpg'
@@ -40,10 +41,10 @@ const Homepage = () => {
       </article>
 
       <article className="container mx-auto pt-16">
-        <header className="text-4xl mb-8">Now On View</header>
-        <div className="flex justify-between text-xl mb-4">
+        <header className="text-4xl mb-4 font-bold">Now On View</header>
+        <div className="flex justify-between text-xl mb-4 font-semibold">
           <h2>Explore exhibition gallery guides, videos, articles, and more.</h2>
-          <p>View all exhibitions</p>
+          <Link to="/exhibitions" preventScrollReset={false} relative="path" className="hover-underline-animation-black cursor-pointer">View all exhibitions</Link>
         </div>
         <ExhibitionTable data={exhibitions} />
         <Card />
