@@ -7,7 +7,7 @@ const BuyTickets = () => {
 
   const [selectedDate, setSelectedDate] = useState(0);
   const [selectedDatePicker, setSelectedDatePicker] = useState(0);
-  const [dateState, setDate] = useState('')
+  const [dateState, setDate] = useState()
   const [today, setToday] = useState("")
   const [tomorrow, setTomorrow] = useState("")
 
@@ -35,10 +35,11 @@ const BuyTickets = () => {
   function handleDatePickerChange(date) {
     setSelectedDate(date);
     setSelectedDatePicker(date);
-    setDate('3')
+    setDate(3)
   }
 
   function AddTicket(ticket) {
+    handleClick();
     if (ticket === 1) {
       const test = prices[0]
       const number = tickets + test.price
@@ -67,6 +68,7 @@ const BuyTickets = () => {
   }
 
   function RemoveTicket(ticket) {
+    handleClick()
     if (ticket === 1) {
       const test = prices[0]
       const number = tickets - test.price
@@ -112,6 +114,14 @@ const BuyTickets = () => {
     getToday()
   })
 
+  function handleClick() {
+    const element = document.querySelector('.bg-white');
+    element.classList.add('animate-flash');
+    setTimeout(() => {
+      element.classList.remove('animate-flash');
+    }, 1000);
+  }
+
   var next = new Date();
   next.setDate(next.getDate() + 1)
   
@@ -144,15 +154,15 @@ const BuyTickets = () => {
           <p>Please select an available date for your visit.</p>
           <div className="flex flex-row space-x-32 h-20">
             <button
-              className={`${dateState === '1' ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} w-full border border-gray-200 shadow-xl rounded-lg flex-col items-center py-4`}
-              onClick={e => handleDateChange(new Date(), '1')}
+              className={`${dateState === 1 ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} transition duration-300 w-full border border-gray-200 shadow-xl rounded-lg flex-col items-center py-4`}
+              onClick={e => handleDateChange(new Date(), 1)}
             >
               <header>Today</header>
               <p>{today}</p>
             </button>
             <button
-              className={`${dateState === '2' ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} w-full border border-gray-200 shadow-xl rounded-lg flex-col items-center h-20 py-4`}
-              onClick={e => handleDateChange(next, '2')}
+              className={`${dateState === 2 ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} transition duration-300 w-full border border-gray-200 shadow-xl rounded-lg flex-col items-center h-20 py-4`}
+              onClick={e => handleDateChange(next, 2)}
             >
               <header>Tomorrow</header>
               <p>{tomorrow}</p>
@@ -161,7 +171,7 @@ const BuyTickets = () => {
               <DatePicker
                 selected={selectedDatePicker}
                 onChange={handleDatePickerChange}
-                className={`${dateState != ('1' && '2') ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} rounded-lg text-center`}
+                className={`${dateState > 2 ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} transition duration-300 rounded-lg text-center`}
                 placeholderText="Or enter date"
                 minDate={new Date()}
                 dateFormat="dd/MM/yyyy"
@@ -179,7 +189,7 @@ const BuyTickets = () => {
           <p>Up to nine general admission tickets can be purchased here. For information about bringing a group or scheduling a group tour, see Group Visits.</p>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400">
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
               <header className="text-left w-full font-bold">Adult Admission</header>
               <p>$30.00</p>
               <p className="cursor-pointer" onClick={ticket1 > 0 ? e => RemoveTicket(1) : null}><AiOutlineMinusSquare size={40}/></p>
@@ -189,7 +199,7 @@ const BuyTickets = () => {
           </div>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400">
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
               <header className="text-left w-full font-bold">Child Admission</header>
               <p>$00.00</p>
               <p className="cursor-pointer" onClick={ticket2 > 0 ? e => RemoveTicket(2) : null}><AiOutlineMinusSquare size={40}/></p>
@@ -199,7 +209,7 @@ const BuyTickets = () => {
           </div>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400">
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
               <header className="text-left w-full font-bold">Student Admission</header>
               <p>$17.00</p>
               <p className="cursor-pointer" onClick={ticket3 > 0 ? e => RemoveTicket(3) : null}><AiOutlineMinusSquare size={40}/></p>
@@ -209,7 +219,7 @@ const BuyTickets = () => {
           </div>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400">
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
               <header className="text-left w-full font-bold">Senior Admission</header>
               <p>$22.00</p>
               <p className="cursor-pointer" onClick={ticket4 > 0 ? e => RemoveTicket(4) : null}><AiOutlineMinusSquare size={40}/></p>

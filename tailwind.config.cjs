@@ -8,7 +8,11 @@ module.exports = {
       'lg': '1024px',
       'xl': '1280px',
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'planYourVisit': "url('/src/assets/planYourVisit.jpg')",
+      }
+    },
   },
   plugins: [],
 }
