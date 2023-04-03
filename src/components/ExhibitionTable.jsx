@@ -20,22 +20,25 @@ const ExhibitionTable = ({ data }) => {
         ref={containerRef}
       >
         {data.map((exhibition) => (
-          <section className="inline-block" key={exhibition.id}>
-            <img src={exhibition.image} alt={exhibition.title} className="w-auto h-64 object-cover pr-16" />
-            <div className="mt-2">{exhibition.title}</div>
+          <section className="inline-block w-96" key={exhibition.id}>
+            <div className="grid pr-8">
+              <img src={exhibition.img} alt={exhibition.title} className="w-auto h-64 object-cover" />
+              <div className="whitespace-pre-wrap text-lg font-semibold">{exhibition.title}</div>
+              <p className="text-left text-sm">{exhibition.date}</p>
+            </div>
           </section>
         ))}
       </div>
       <button
         className="absolute top-1/2 -left-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-3 py-6 rounded-full focus:outline-none"
-        onClick={() => handleScroll(-400)}
+        onClick={() => handleScroll(-384)}
         disabled={scrollLeft === 0}
       >
         {"<"}
       </button>
       <button
         className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-2 py-6 rounded-full focus:outline-none"
-        onClick={() => handleScroll(400)}
+        onClick={() => handleScroll(384)}
         disabled={containerRef.current && scrollLeft === containerRef.current.scrollWidth - containerRef.current.clientWidth}
       >
         {">"}

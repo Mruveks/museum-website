@@ -1,10 +1,16 @@
 import React from 'react'
 import { RiSurgicalMaskFill, RiMap2Line } from 'react-icons/ri'
 import { MdBrunchDining } from 'react-icons/md'
-
+import { Helmet } from 'react-helmet'
 const PlanYourVisit = () => {
   return (
     <main>
+
+      <Helmet>
+        <title>Plan Your Visit | The Museum</title>
+        <meta name="description" content="Plan Your Visit at The Museum"></meta>
+      </Helmet>
+
       <article className="w-full h-[40rem] bg-planYourVisit bg-top-bottom">
         <section className="flex flex-col h-full justify-center text-white pt-16 px-16 space-y-4">
           <header className="w-full text-6xl font-bold">Plan Your Visit</header>

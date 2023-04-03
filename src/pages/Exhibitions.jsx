@@ -2,11 +2,18 @@ import React from 'react'
 import ex1 from '../assets/ex1.jpg'
 import ex2 from '../assets/ex2.jpg'
 import ex3 from '../assets/ex3.jpg'
+import {exhibitionsData} from '../components/exhibitionsData.js'
 
+import { Helmet } from 'react-helmet'
 
 const Exhibitions = () => {
   return (
     <main>
+
+      <Helmet>
+        <title>Exhibitions | The Museum</title>
+        <meta name="description" content="Current, upcoming and past exhibitions"></meta>
+      </Helmet>
 
       <article className="container py-16">
         <header className="text-4xl mb-8 font-bold">Exhibitions</header>
@@ -15,53 +22,21 @@ const Exhibitions = () => {
         </div>
       </article>
 
-      <article className="grid grid-cols-2">
+      <article className="grid grid-cols-2 container">
         
-        <section className="grid grid-flow-row w-full h-[40rem] hover:shadow-xl opacity-80 hover:grayscale-0 hover:opacity-100">
-          <span className="h-[30rem] w-full">
-            <img src={ex1} className=" h-[30rem] w-full" />
-          </span>
-          <span className="h-[10rem] w-full flex flex-col items-center justify-center border-r border-gray-400 ">
-            <header className="font-semibold">Exhibition</header>
-            <header className="text-xl font-bold">The Facade Commission: Hew Locke, Gilt</header>
-            <p>Through May 30th</p>
-          </span> 
-        </section>
-
-        <section className="grid grid-flow-row w-full h-[40rem] hover:shadow-xl opacity-80 hover:grayscale-0 hover:opacity-100">
-          <span className="h-[30rem] w-full">
-            <img src={ex2} className=" h-[30rem] w-full" />
-          </span>
-          <span className="h-[10rem] w-full flex flex-col items-center justify-center border-gray-400 ">
-            <header className="font-semibold">Exhibition</header>
-            <header className="text-xl font-bold">In Praise of Painting: Dutch Masterpieces at The Museum</header>
-            <p>Ongoing</p>
-          </span>
-        </section>
-
-        <section className="grid grid-flow-row w-full h-[40rem] hover:shadow-xl opacity-80 hover:grayscale-0 hover:opacity-100">
-          <span className="h-[30rem] w-full">
-            <img src={ex3} className=" h-[30rem] w-full" />
-          </span>
-          <span className="h-[10rem] w-full flex flex-col items-center justify-center border-r border-gray-400 ">
-            <header className="font-semibold">Exhibition</header>
-            <header className="text-xl font-bold">Lives of the Gods: Divinity in Maya Art</header>
-            <p>Through April 2nd</p>
-          </span> 
-        </section>
-
-        <section className="grid grid-flow-row w-full h-[40rem] hover:shadow-xl opacity-80 hover:grayscale-0 hover:opacity-100">
-          <span className="h-[30rem] w-full">
-            <img src={ex2} className=" h-[30rem] w-full" />
-          </span>
-          <span className="h-[10rem] w-full flex flex-col items-center justify-center border-gray-400 ">
-            <header className="font-semibold">Exhibition</header>
-            <header className="text-xl font-bold">In Praise of Painting: Dutch Masterpieces at The Museum</header>
-            <p>Ongoing</p>
-          </span>
-        </section>
+        {exhibitionsData.map((exhibition) => (
+          <section key={exhibition.id} className="grid grid-flow-row text-left w-full h-[40rem] hover:shadow-2xl opacity-80 hover:grayscale-0 hover:opacity-100 transition duration-700">
+            <span className="h-[30rem] w-full">
+              <img src={exhibition.img} alt="Exhibition 1" className=" h-[30rem] w-full" />
+            </span>
+            <span className="h-[8rem] w-full grid px-4 items-center">
+              <p className="font-semibold">Exhibition</p>
+              <p className="text-xl font-bold">{exhibition.title}</p>
+              <p>{exhibition.date}</p>
+            </span> 
+          </section>
+        ))}
         
-
       </article>
     </main>
   )

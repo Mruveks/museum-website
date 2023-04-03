@@ -1,11 +1,18 @@
 import React from 'react'
 import membership from '../../assets/membership.jpg'
 import { TiTickOutline } from 'react-icons/ti'
+import { Helmet } from 'react-helmet'
 
 const BecomeAMember = () => {
 
   return (
     <main>
+
+      <Helmet>
+        <title>Membership | The Museum</title>
+        <meta name="description" content="Become a Member of The Museums Community. Join now to experience exclusive access to newest exhibitions"/>
+      </Helmet>
+
       <article className="h-fit w-full grid grid-cols-2">
         <div className="p-24">
           <header className="text-6xl font-bold">Membership Starts Here</header>
@@ -22,7 +29,7 @@ const BecomeAMember = () => {
       </article>
 
       <article className="grid grid-cols-4 mt-20 px-14">
-        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl">
+        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl transition duration-300">
 
           <header className="font-semibold text-2xl">Membership</header>
 
@@ -43,7 +50,7 @@ const BecomeAMember = () => {
           <p className="mt-10 px-4 font-semibold underline cursor-pointer">See all benefits</p>
         </div>
 
-        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl">
+        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl transition duration-300">
 
           <header className="font-semibold text-2xl">Patron</header>
 
@@ -64,7 +71,7 @@ const BecomeAMember = () => {
           <p className="mt-10 px-4 font-semibold underline cursor-pointer">See all benefits</p>
         </div>
         
-        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl">
+        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl transition duration-300">
 
           <header className="font-semibold text-2xl">The Apollo Circle</header>
 
@@ -85,7 +92,7 @@ const BecomeAMember = () => {
           <p className="mt-10 px-4 font-semibold underline cursor-pointer">See all benefits</p>
         </div>
         
-        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl">
+        <div className="w-96 h-[40rem] flex flex-col p-8 space-y-12 border border-gray-200 shadow-xl hover:shadow-2xl transition duration-300">
 
           <header className="font-semibold text-2xl">The Museum's Friends</header>
 

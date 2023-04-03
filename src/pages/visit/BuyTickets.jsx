@@ -2,6 +2,7 @@ import React,{ useState, useEffect } from 'react'
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { AiOutlineMinusSquare, AiOutlinePlusSquare } from 'react-icons/ai'
+import { Helmet } from 'react-helmet';
 
 const BuyTickets = () => {
 
@@ -127,6 +128,12 @@ const BuyTickets = () => {
   
   return (
     <main>
+
+      <Helmet>
+        <title>Buy Tickets | The Museum</title>
+        <meta name="description" content="Buy tickets to the museum"/>
+      </Helmet>
+
       <article>
         <section className="container py-16 space-y-4">
           <header className="text-4xl font-bold">General Admission Tickets</header>

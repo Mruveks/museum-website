@@ -3,21 +3,18 @@ import museumvideo from '../assets/museum-video.mp4';
 import ExhibitionTable from '../components/ExhibitionTable';
 import Card from '../components/Card';
 import { Link } from "react-router-dom";
-
-import ex1 from '../assets/ex1.jpg'
-import ex2 from '../assets/ex2.jpg'
-import ex3 from '../assets/ex3.jpg'
-
-const exhibitions = [
-  { id: 1, title: 'Exhibition 1', image: ex1 },
-  { id: 2, title: 'Exhibition 2', image: ex2 },
-  { id: 3, title: 'Exhibition 3', image: ex3 },
-];
+import { Helmet } from 'react-helmet'
+import {exhibitionsData} from '../components/exhibitionsData'
 
 const Homepage = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>The Museum</title>
+        <meta name="description" content="Explore exhibition gallery guides, videos, articles, and more at The Museum." />
+      </Helmet>
+      
       <article className="relative h-screen overflow-hidden">
         <span className="absolute inset-0">
           <video
@@ -46,7 +43,7 @@ const Homepage = () => {
           <h2>Explore exhibition gallery guides, videos, articles, and more.</h2>
           <Link to="/exhibitions" preventScrollReset={false} relative="path" className="hover-underline-animation-black cursor-pointer">View all exhibitions</Link>
         </div>
-        <ExhibitionTable data={exhibitions} />
+        <ExhibitionTable data={exhibitionsData} />
         <Card />
 
         <div className="grid grid-cols-3 gap-8">
