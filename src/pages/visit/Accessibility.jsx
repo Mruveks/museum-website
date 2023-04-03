@@ -1,13 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import access2 from '../../assets/accessibility2.jpg'
-import access3 from '../../assets/accessibility3.jpg'
-import access4 from '../../assets/accessibility4.jpg'
-import access5 from '../../assets/accessibility5.jpg'
-import access6 from '../../assets/accessibility6.jpg'
-import access7 from '../../assets/accessibility7.jpg'
-import access8 from '../../assets/accessibility8.jpg'
-import access9 from '../../assets/accessibility9.jpg'
+import { access2, access3, access4, access5, access6, access7, access8, access9 } from '../../assets/index'
 
 const Accessibility = () => {
   return (

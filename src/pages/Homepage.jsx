@@ -22,7 +22,7 @@ const Homepage = () => {
             autoPlay
             loop
             muted
-            className="object-cover object-bottom w-full h-full"
+            className=" object-cover brightness-50 w-full h-full"
             style={{ height: "calc(100% + 160px)", marginTop: "-80px" }}
           />
         </span>
@@ -37,18 +37,16 @@ const Homepage = () => {
         </span>
       </article>
 
-      <article className="container mx-auto pt-16">
-        <header className="text-4xl mb-4 font-bold">Now On View</header>
-        <div className="flex justify-between text-xl mb-4 font-semibold">
+      <article className="container pt-16 space-y-4">
+        <header className="text-6xl font-bold">Now On View</header>
+        <div className="grid grid-cols-2 text-xl mb-4 font-semibold">
           <h2>Explore exhibition gallery guides, videos, articles, and more.</h2>
-          <Link to="/exhibitions" preventScrollReset={false} relative="path" className="hover-underline-animation-black cursor-pointer">View all exhibitions</Link>
+          <div className="w-full text-right">
+            <Link to="/exhibitions" preventScrollReset={false} relative="path" className="hover-underline-animation-black cursor-pointer">View all exhibitions</Link>
+          </div>
         </div>
         <ExhibitionTable data={exhibitionsData} />
         <Card />
-
-        <div className="grid grid-cols-3 gap-8">
-          {/* Add paginations */}
-        </div>
       </article>
     </div>
   );

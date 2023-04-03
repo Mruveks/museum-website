@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import img from '../../assets/ex3.jpg'
+import LazyLoad from 'react-lazyload'
+
 import outdoorCafe from '../../assets/outdoorCafe.jpg'
 import balconyLounge from '../../assets/balconyLounge.jpg'
 import balconyCafe from '../../assets/balconyCafe.jpg'
@@ -24,10 +25,12 @@ const FoodAndDrink = () => {
 
       <article className="grid grid-cols-2 gap-10 container pt-16">
         <span className="w-full h-auto space-y-4">
-          <img src={eatery} alt="eatery" className="h-96 w-full object-cover" />
+          <LazyLoad offset={1000}>
+            <img src={eatery} alt="eatery" className="h-96 w-full object-cover" />
+          </LazyLoad>
           <p>
             <h2 className="font-semibold text-2xl">The Eatery, Ground Floor</h2>
-            <p className="font-semibold text-xl">$$</p>
+              <p className="font-semibold text-xl">$$</p>
             <div>
               <h3 className="font-semibold pt-4 text-xl">Hours</h3>
               <p>
@@ -38,7 +41,9 @@ const FoodAndDrink = () => {
           </p>
         </span>
         <span className="w-full h-auto space-y-4">
-          <img src={wingedCafe} alt="wingedCafe" className="h-96 w-full" />
+          <LazyLoad offset={1000}>
+            <img src={wingedCafe} alt="wingedCafe" className="h-96 w-full" />
+            </LazyLoad>
           <p>
             <h2 className="font-semibold text-2xl">Wing Cafe, Floor 1</h2>
             <p className="font-semibold text-xl">$$</p>
@@ -53,7 +58,9 @@ const FoodAndDrink = () => {
           </p>
         </span>
         <span className="w-full h-auto space-y-4">
-          <img src={balconyCafe} alt="balconyCafe" className="h-96 w-full object-cover" />
+          <LazyLoad offset={1000}>
+            <img src={balconyCafe} alt="balconyCafe" className="h-96 w-full object-cover" />
+          </LazyLoad>
           <p>
             <h2 className="font-semibold text-2xl">Great Hall Balcony Cafe, Floor 2</h2>
             <p className="font-semibold text-xl">$</p>
@@ -68,7 +75,9 @@ const FoodAndDrink = () => {
           </p>
         </span>
         <span className="w-full h-auto space-y-4">
-          <img src={balconyLounge} alt="balconyLounge" className="h-96 w-full object-cover" />
+          <LazyLoad offset={1000}>
+            <img src={balconyLounge} alt="balconyLounge" className="h-96 w-full object-cover" />
+          </LazyLoad>
           <p>
             <h2 className="font-semibold text-2xl">Balcony Lounge, Floor 2</h2>
             <p className="font-semibold text-xl">$$$</p>
@@ -84,7 +93,9 @@ const FoodAndDrink = () => {
           </p>
         </span>
         <span className="w-full h-auto space-y-4">
-          <img src={roofGarden} alt="roofGarden" className="h-96 w-full object-cover" />
+          <LazyLoad offset={1000}>
+            <img src={roofGarden} alt="roofGarden" className="h-96 w-full object-cover" />
+          </LazyLoad>
           <p>
             <h2 className="font-semibold text-2xl">The Cantor Roof Garden Bar, Floor 5</h2>
             <p className="font-semibold text-xl">$$$</p>
@@ -101,7 +112,9 @@ const FoodAndDrink = () => {
       </article>
 
       <article className="grid grid-cols-2 container gap-10 pt-16">
-        <img src={outdoorCafe} alt="outdoorCafe" className="h-96 w-full object-cover"/>
+        <LazyLoad offset={1000}>
+          <img src={outdoorCafe} alt="outdoorCafe" className="h-96 w-full object-cover" />
+        </LazyLoad>
         <p>
           <h2 className="font-semibold text-2xl">Outdoor Cafe</h2>
             <p className="font-semibold text-xl">$</p>

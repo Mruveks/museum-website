@@ -1,10 +1,5 @@
 import React from 'react'
-import card1 from '../assets/card1.jpg'
-import card2 from '../assets/card2.jpg'
-import card3 from '../assets/card3.jpg'
-import card4 from '../assets/card4.jpg'
-import card5 from '../assets/card5.jpg'
-import card1_blur from '../assets/card1-blur.jpg'
+import { card1, card2, card3, card4, card5, card1blur} from '../assets/index'
 import LazyLoad from 'react-lazyload';
 
 const Card = () => {
@@ -13,7 +8,7 @@ const Card = () => {
     <main className="grid gap-16 w-auto h-fit mt-20">
 
       <section className="grid grid-cols-2">
-        <LazyLoad offset={1000} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1blur}>
           <img src={card1} alt="" className="w-auto" />
         </LazyLoad>
         <div className="bg-gray-200 space-y-4 p-16">
@@ -29,13 +24,13 @@ const Card = () => {
           <p>Celebrate the vital contributions of women artists through exhibitions, talks, digital content, and more.</p>
           <a href="#" className="hover-underline-animation-black font-semibold">Learn more</a>
         </div>
-        <LazyLoad offset={1000} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1blur}>
           <img src={card2} alt="" className="w-auto"/>
         </LazyLoad>
       </section>
 
       <section className="grid grid-cols-2">
-        <LazyLoad offset={1000} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1blur}>
           <img src={card3} alt="" className="w-auto"/>
         </LazyLoad>
         <div className="bg-gray-200 space-y-4 p-16 ">
@@ -51,13 +46,13 @@ const Card = () => {
           <p>Every Friday and Saturday night enjoy live music, drinks, and gallery chats.</p>
           <a href="#" className="hover-underline-animation-black font-semibold">Plan your visit</a>
         </div>
-        <LazyLoad offset={1000} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1blur}>
           <img src={card4} alt="" className="w-auto"/>
         </LazyLoad>
       </section>
 
       <section className="grid grid-cols-2">
-        <LazyLoad offset={1000} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1blur}>
           <img src={card5} alt="" className="w-auto" />
         </LazyLoad>  
         <div className="bg-gray-200 space-y-4 p-16">

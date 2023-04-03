@@ -35,7 +35,9 @@ const BecomeAMember = () => {
 
           <div className="w-full space-y-2 px-4">
             <p className="font-bold text-lg">$110 - $600</p>
-            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">Join/Renew</button>
+            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">
+              Join/Renew
+              </button>
           </div>
 
           <div className="grid grid-cols-[20%_80%] h-60 text-lg">
@@ -56,7 +58,9 @@ const BecomeAMember = () => {
 
           <div className="w-full space-y-2 px-4">
             <p className="font-bold text-lg">$1,500 - $25,000</p>
-            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">Join/Renew</button>
+            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">
+              Join/Renew
+            </button>
           </div>
 
           <div className="grid grid-cols-[20%_80%] text-lg h-60">
@@ -77,7 +81,9 @@ const BecomeAMember = () => {
 
           <div className="w-full space-y-2 px-4">
             <p className="font-bold text-lg">$1,200 - $3,500</p>
-            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">Join/Renew</button>
+            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">
+              Join/Renew
+            </button>
           </div>
 
           <div className="grid grid-cols-[20%_80%] text-lg h-60">
@@ -98,7 +104,9 @@ const BecomeAMember = () => {
 
           <div className="w-full space-y-2 px-4">
             <p className="font-bold text-lg">$2,500 - $15,000</p>
-            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">Join/Renew</button>
+            <button className="border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit py-4 px-8 text-white font-semibold rounded-lg">
+              Join/Renew
+            </button>
           </div>
 
           <div className="grid grid-cols-[20%_80%] text-lg h-60">

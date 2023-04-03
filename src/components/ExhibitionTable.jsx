@@ -15,12 +15,12 @@ const ExhibitionTable = ({ data }) => {
 
   return (
     <article className="relative">
-      <div ref={containerRef} className="overflow-x-hidden whitespace-nowrap py-4 scroll-hidden">
+      <div ref={containerRef} className="overflow-x-hidden whitespace-nowrap py-4 scroll-hidden text-left">
         {data.map((exhibition) => (
           <section className="inline-block w-96" key={exhibition.id}>
             <div className="grid pr-8">
               <img src={exhibition.img} alt={exhibition.title} className="w-auto h-64 object-cover" />
-              <div className="whitespace-pre-wrap text-lg font-semibold">{exhibition.title}</div>
+              <div className="whitespace-pre-wrap w-full text-lg font-semibold hover:underline cursor-pointer">{exhibition.title}</div>
               <p className="text-left text-sm">{exhibition.date}</p>
             </div>
           </section>

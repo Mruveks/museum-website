@@ -43,23 +43,20 @@ const Navbar = () => {
           {activeMenu === 1 && (
             <div className="absolute z-40 pt-4  w-max left-0 top-full bg-red-800 shadow-lg">
               <ul>
-                <li className="hover:bg-red-700 p-2">
-                  <NavLink to="/visit/plan-your-visit">Plan Your Visit</NavLink>
+                <li className="hover:bg-red-700">
+                  <NavLink to="/visit/plan-your-visit" className="hover-underline-animation w-full p-2">Plan Your Visit</NavLink>
                 </li>
-                <li className="hover:bg-red-700 p-2">
-                  <NavLink to="/visit/buy-tickets">Buy Tickets</NavLink>
+                <li className="hover:bg-red-700">
+                  <NavLink to="/visit/buy-tickets" className="hover-underline-animation w-full p-2">Buy Tickets</NavLink>
                 </li>
-                <li className="hover:bg-red-700 p-2">
-                  <NavLink to="/visit/membership">Become a Member</NavLink>
+                <li className="hover:bg-red-700">
+                  <NavLink to="/visit/membership" className="hover-underline-animation w-full p-2">Become a Member</NavLink>
                 </li>
-                <li className="hover:bg-red-700 p-2">
-                  <a href="#">Museum Map</a>
+                <li className="hover:bg-red-700">
+                  <NavLink to="/visit/dining" className="hover-underline-animation w-full p-2">Food and Drink</NavLink> 
                 </li>
-                <li className="hover:bg-red-700 p-2">
-                  <NavLink to="/visit/dining">Food and Drink</NavLink> 
-                </li>
-                <li className="hover:bg-red-700 p-2">
-                <NavLink to="/learn/accessibility">Accessibility</NavLink> 
+                <li className="hover:bg-red-700">
+                <NavLink to="/learn/accessibility" className="hover-underline-animation w-full p-2">Accessibility</NavLink> 
                 </li>
               </ul>
             </div>
@@ -74,14 +71,14 @@ const Navbar = () => {
           {activeMenu === 2 && (
             <div className="absolute z-40 pt-4  w-max left-0 top-full bg-red-800 shadow-lg">
               <ul>
-                <li className="hover:bg-red-700 p-2">
-                  <NavLink to="/exhibitions">Exhabitions</NavLink>
+                <li className="hover:bg-red-700">
+                  <NavLink to="/exhibitions" className="hover-underline-animation w-full p-2">Exhabitions</NavLink>
                 </li>
-                <li className="hover:bg-red-700 p-2">
-                  <a href="#">Events and Tours</a>
+                <li className="hover:bg-red-700 ">
+                <NavLink to="/exhibitions" className="hover-underline-animation w-full p-2">Events and Tours</NavLink>
                 </li>
-                <li className="hover:bg-red-700 p-2">
-                  <a href="#">Performances</a>
+                <li className="hover:bg-red-700 ">
+                <NavLink to="/exhibitions" className="hover-underline-animation w-full p-2">Performances</NavLink>
                 </li>
               </ul>
             </div>
