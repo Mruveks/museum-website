@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         'planYourVisit': "url('/src/assets/planYourVisit.jpg')",
+        'accessibility': "url('/src/assets/accessibility1.jpg')",
       }
     },
   },

@@ -59,7 +59,7 @@ const Navbar = () => {
                   <NavLink to="/visit/dining">Food and Drink</NavLink> 
                 </li>
                 <li className="hover:bg-red-700 p-2">
-                  <a href="#">Accessibility</a>
+                <NavLink to="/learn/accessibility">Accessibility</NavLink> 
                 </li>
               </ul>
             </div>
