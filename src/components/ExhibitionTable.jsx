@@ -15,10 +15,7 @@ const ExhibitionTable = ({ data }) => {
 
   return (
     <article className="relative">
-      <div
-        className="overflow-x-hidden whitespace-nowrap py-4 scroll-hidden"
-        ref={containerRef}
-      >
+      <div ref={containerRef} className="overflow-x-hidden whitespace-nowrap py-4 scroll-hidden">
         {data.map((exhibition) => (
           <section className="inline-block w-96" key={exhibition.id}>
             <div className="grid pr-8">

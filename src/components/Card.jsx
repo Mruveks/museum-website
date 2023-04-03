@@ -13,7 +13,7 @@ const Card = () => {
     <main className="grid gap-16 w-auto h-fit mt-20">
 
       <section className="grid grid-cols-2">
-        <LazyLoad offset={100} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1_blur}>
           <img src={card1} alt="" className="w-auto" />
         </LazyLoad>
         <div className="bg-gray-200 space-y-4 p-16">
@@ -29,13 +29,13 @@ const Card = () => {
           <p>Celebrate the vital contributions of women artists through exhibitions, talks, digital content, and more.</p>
           <a href="#" className="hover-underline-animation-black font-semibold">Learn more</a>
         </div>
-        <LazyLoad offset={100} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1_blur}>
           <img src={card2} alt="" className="w-auto"/>
         </LazyLoad>
       </section>
 
       <section className="grid grid-cols-2">
-        <LazyLoad offset={100} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1_blur}>
           <img src={card3} alt="" className="w-auto"/>
         </LazyLoad>
         <div className="bg-gray-200 space-y-4 p-16 ">
@@ -51,13 +51,13 @@ const Card = () => {
           <p>Every Friday and Saturday night enjoy live music, drinks, and gallery chats.</p>
           <a href="#" className="hover-underline-animation-black font-semibold">Plan your visit</a>
         </div>
-        <LazyLoad offset={100} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1_blur}>
           <img src={card4} alt="" className="w-auto"/>
         </LazyLoad>
       </section>
 
       <section className="grid grid-cols-2">
-        <LazyLoad offset={100} placeholder={card1_blur}>
+        <LazyLoad offset={1000} placeholder={card1_blur}>
           <img src={card5} alt="" className="w-auto" />
         </LazyLoad>  
         <div className="bg-gray-200 space-y-4 p-16">
