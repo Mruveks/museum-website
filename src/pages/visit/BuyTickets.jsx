@@ -136,8 +136,8 @@ const BuyTickets = () => {
 
       <article>
         <section className="container py-16 space-y-4">
-          <header className="text-4xl font-bold">General Admission Tickets</header>
-          <p className="w-[40rem] pb-2 border-b border-gray-200">$30 for adults; $22 for seniors; $17 for students.</p>
+          <header className="text-6xl font-bold">General Admission Tickets</header>
+          <p className="w-[40rem] pb-2 pt-8 border-b border-gray-200">$30 for adults; $22 for seniors; $17 for students.</p>
           <p className="w-[40rem] pb-2 border-b border-gray-200">Free for Members, Patrons, and children under 12.</p>
           <p className="w-[40rem] pb-2 border-b border-gray-200">To purchase general admission tickets in advance, choose one of the The Met locations</p>
           <p className="w-[40rem] pb-2 border-b border-gray-200">Admission is free for a caregiver accompanying a visitor with a disability.</p>
@@ -146,7 +146,7 @@ const BuyTickets = () => {
 
       <aside className="fixed flex flex-col top-[8rem] right-40 bg-white border border-gray-200 shadow-xl h-40 w-96 px-10 py-4">
         <span className="grid grid-flow-col h-10 items-center w-full">
-          <header className="w-full text-left font-bold">Subtotal:</header>
+          <h3 className="w-full text-left font-bold">Subtotal:</h3>
           <p className="ml-auto mr-0 space-x-1 text-right font-semibold flex">
             <p>{ticketsNumber} {ticketsNumber === 1 ? 'ticket' : 'tickets'} =</p>
             <p className="w-10">${tickets}</p>
@@ -157,21 +157,21 @@ const BuyTickets = () => {
       
       <article className="border-gray-400 border-t space-y-16 pt-32">
         <section className="container space-y-2 pr-96">
-          <header className="text-2xl font-semibold">1. Date</header>
+          <h2 className="text-2xl font-semibold">1. Date</h2>
           <p>Please select an available date for your visit.</p>
           <div className="flex flex-row space-x-32 h-20">
             <button
               className={`${dateState === 1 ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} transition duration-300 w-full border border-gray-200 shadow-xl rounded-lg flex-col items-center py-4`}
               onClick={e => handleDateChange(new Date(), 1)}
             >
-              <header>Today</header>
+              <h3>Today</h3>
               <p>{today}</p>
             </button>
             <button
               className={`${dateState === 2 ? 'bg-gray-600 text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-100'} transition duration-300 w-full border border-gray-200 shadow-xl rounded-lg flex-col items-center h-20 py-4`}
               onClick={e => handleDateChange(next, 2)}
             >
-              <header>Tomorrow</header>
+              <h3>Tomorrow</h3>
               <p>{tomorrow}</p>
             </button>
             <form className="w-full border border-gray-200 shadow-xl  rounded-lg items-center">
@@ -188,7 +188,7 @@ const BuyTickets = () => {
         </section>
 
         <section className="container space-y-2 pr-96">
-          <header className="text-2xl font-semibold">2. Tickets</header>
+          <h2 className="text-2xl font-semibold">2. Tickets</h2>
           <div className="flex space-x-1">
             <p>You're visiting the The Museum on </p>
             <p>{selectedDate ? selectedDate.toLocaleDateString() : ''}</p>
@@ -196,8 +196,8 @@ const BuyTickets = () => {
           <p>Up to nine general admission tickets can be purchased here. For information about bringing a group or scheduling a group tour, see Group Visits.</p>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
-              <header className="text-left w-full font-bold">Adult Admission</header>
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-12 border-b border-gray-400 font-semibold">
+              <h3 className="text-left w-full font-bold">Adult Admission</h3>
               <p>$30.00</p>
               <p className="cursor-pointer" onClick={ticket1 > 0 ? e => RemoveTicket(1) : null}><AiOutlineMinusSquare size={40}/></p>
               <p>{ticket1}</p>
@@ -206,8 +206,8 @@ const BuyTickets = () => {
           </div>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
-              <header className="text-left w-full font-bold">Child Admission</header>
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-12 border-b border-gray-400 font-semibold">
+              <h3 className="text-left w-full font-bold">Child Admission</h3>
               <p>$00.00</p>
               <p className="cursor-pointer" onClick={ticket2 > 0 ? e => RemoveTicket(2) : null}><AiOutlineMinusSquare size={40}/></p>
               <p>{ticket2}</p>
@@ -216,8 +216,8 @@ const BuyTickets = () => {
           </div>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
-              <header className="text-left w-full font-bold">Student Admission</header>
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-12 border-b border-gray-400 font-semibold">
+              <h3 className="text-left w-full font-bold">Student Admission</h3>
               <p>$17.00</p>
               <p className="cursor-pointer" onClick={ticket3 > 0 ? e => RemoveTicket(3) : null}><AiOutlineMinusSquare size={40}/></p>
               <p>{ticket3}</p>
@@ -226,8 +226,8 @@ const BuyTickets = () => {
           </div>
 
           <div className="grid grid-flow-row items-center text-center w-full">
-            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-20 border-b border-gray-400 font-semibold">
-              <header className="text-left w-full font-bold">Senior Admission</header>
+            <div className="grid grid-cols-[60%_10%_10%_10%_10%] w-full items-center h-12 border-b border-gray-400 font-semibold">
+              <h3 className="text-left w-full font-bold">Senior Admission</h3>
               <p>$22.00</p>
               <p className="cursor-pointer" onClick={ticket4 > 0 ? e => RemoveTicket(4) : null}><AiOutlineMinusSquare size={40}/></p>
               <p>{ticket4}</p>

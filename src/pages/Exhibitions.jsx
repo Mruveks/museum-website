@@ -15,8 +15,8 @@ const Exhibitions = () => {
         <meta name="description" content="Current, upcoming and past exhibitions"></meta>
       </Helmet>
 
-      <article className="container py-16">
-        <header className="text-4xl mb-8 font-bold">Exhibitions</header>
+      <article className="container space-y-4 py-16">
+        <header className="text-6xl font-bold">Exhibitions</header>
         <div className="flex justify-between text-xl mb-4 font-semibold">
           <h2>Current, Upcoming and Past</h2>
         </div>
@@ -31,7 +31,7 @@ const Exhibitions = () => {
             </span>
             <span className="h-[8rem] w-full grid px-4 items-center">
               <p className="font-semibold">Exhibition</p>
-              <p className="text-xl font-bold">{exhibition.title}</p>
+              <h2 className="text-xl font-bold">{exhibition.title}</h2>
               <p>{exhibition.date}</p>
             </span> 
           </section>

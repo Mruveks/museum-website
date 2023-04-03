@@ -1,6 +1,6 @@
 import React from 'react'
 import { RiSurgicalMaskFill, RiMap2Line } from 'react-icons/ri'
-import { MdBrunchDining } from 'react-icons/md'
+import { MdBrunchDining, MdDirectionsCarFilled, MdGroups2, MdAccessibleForward } from 'react-icons/md'
 import { Helmet } from 'react-helmet'
 const PlanYourVisit = () => {
   return (
@@ -30,29 +30,29 @@ const PlanYourVisit = () => {
       </article>
 
       <article className="h-fit w-full grid grid-cols-[60%_40%]">
-        <div className="p-16 w-full">
+        <div className="p-16 w-full space-y-4">
           <header className="text-6xl font-bold">Tickets</header>
           <p className="text-2xl font-semibold">General Admission</p>
           <p>Visitors not eligible for suggested admission may purchase tickets online.</p>
           <div className="grid grid-flow-row mt-10 text-xl space-y-4 text-right">
             <div className="grid grid-cols-[90%_10%] w-full border-b border-gray-400">
-              <header className="text-left w-full">Adults</header>
+              <h2 className="text-left w-full">Adults</h2>
               <p className="font-bold">$30</p>
             </div>
             <div className="grid grid-cols-[90%_10%] w-full border-b border-gray-400">
-              <header className="text-left w-full">Seniors (65 and over)</header>
+              <h2 className="text-left w-full">Seniors (65 and over)</h2>
               <p className="font-bold">$22</p>
             </div>
             <div className="grid grid-cols-[90%_10%] w-full border-b border-gray-400">
-              <header className="text-left w-full">Students</header>
+              <h2 className="text-left w-full">Students</h2>
               <p className="font-bold">$17</p>
             </div>
             <div className="grid grid-cols-[90%_10%] w-full border-b border-gray-400">
-              <header className="text-left w-full">Children (under 12)</header>
+              <h2 className="text-left w-full">Children (under 12)</h2>
               <p className="font-bold">free</p>
             </div>
             <div className="grid grid-cols-[90%_10%] w-full border-b border-gray-400">
-              <header className="text-left w-full">Members and patrons</header>
+              <h2 className="text-left w-full">Members and patrons</h2>
               <p className="font-bold">free</p>
             </div>
           </div>
@@ -60,19 +60,19 @@ const PlanYourVisit = () => {
 
         <aside className="pt-16 px-16 space-y-8">
           <div>
-            <header className="text-2xl font-semibold">Booking Online</header>
+            <h2 className="text-2xl font-semibold">Booking Online</h2>
             <p className="text-md">General Admission tickets purchased online can be scanned at any museum entrance at your selected location, date, and time.</p>
           </div>
           <div>
-            <header className="text-2xl font-semibold">Included with your ticket</header>
+            <h2 className="text-2xl font-semibold">Included with your ticket</h2>
             <p className="text-md">All admission tickets include exhibitions and same-day entry to both Met locations</p>
           </div>
           <div>
-            <header className="text-2xl font-semibold">Member benefits</header>
+            <h2 className="text-2xl font-semibold">Member benefits</h2>
             <p className="text-md">Members and patrons enjoy free and unlimited entry. Scan your membership card at any museum entrance for admission. Need help? Visit the membership desk in the Great Hall.</p>
           </div>
           <div>
-            <header className="text-2xl font-semibold">Group Visits</header>
+            <h2 className="text-2xl font-semibold">Group Visits</h2>
             <p className="text-md">All groups of 10 or more, and third-party guided tours of any size, are required to register in advance. Register here</p>
           </div>
         </aside>
@@ -86,20 +86,20 @@ const PlanYourVisit = () => {
         </section>
       </article>
 
-      <header className="text-6xl font-bold px-16 pt-16">Know Before You Go</header>
-      <article className="h-fit w-full grid grid-cols-2 p-16">
+      <header className="text-6xl font-bold px-16 py-16">Know Before You Go</header>
+      <article className="h-fit w-full grid grid-cols-2 px-16">
         <section className="w-full grid grid-flow-row text-left space-y-8">
           <div className="w-full grid grid-cols-[30%_70%]">
             <RiSurgicalMaskFill size={80} className="w-full"/>
             <div className="w-full my-auto">
-              <header className="text-2xl font-semibold">Visitor Guidelines</header>
+              <h2 className="text-2xl font-semibold">Visitor Guidelines</h2>
               <p className="text-md">Masks are strongly recommended. Review our latest guidelines.</p>
             </div>
           </div>
           <div className="w-full grid grid-cols-[30%_70%]">
             <RiMap2Line size={80} className="w-full"/>
             <div className="w-full my-auto">
-              <header className="text-2xl font-semibold">Museum Map</header>
+              <h2 className="text-2xl font-semibold">Museum Map</h2>
               <p className="text-md">Use The Museum's map to get around museum.</p>
             </div>
           </div>
@@ -107,7 +107,7 @@ const PlanYourVisit = () => {
           <div className="w-full grid grid-cols-[30%_70%]">
             <MdBrunchDining size={80} className="w-full"/>
             <div className="w-full my-auto">
-              <header className="text-2xl font-semibold">Dining</header>
+              <h2 className="text-2xl font-semibold">Dining</h2>
               <p className="text-md">Choose from a wide menu that includes items for our youngest visitors.</p>
             </div>
           </div>
@@ -115,29 +115,30 @@ const PlanYourVisit = () => {
 
         <section className="w-full grid grid-flow-row text-left space-y-8">
           <div className="w-full grid grid-cols-[30%_70%]">
-            <RiSurgicalMaskFill size={80} className="w-full"/>
+            <MdDirectionsCarFilled size={80} className="w-full"/>
             <div className="w-full my-auto">
-              <header className="text-2xl font-semibold">Visitor Guidelines</header>
-              <p className="text-md">Masks are strongly recommended. Review our latest guidelines.</p>
+              <h2 className="text-2xl font-semibold">Directions and Parking</h2>
+              <p className="text-md">Get information on traveling on the Museum</p>
             </div>
           </div>
           <div className="w-full grid grid-cols-[30%_70%]">
-            <RiMap2Line size={80} className="w-full"/>
+            <MdAccessibleForward size={80} className="w-full"/>
             <div className="w-full my-auto">
-              <header className="text-2xl font-semibold">Museum Map</header>
-              <p className="text-md">Use The Museum's map to get around museum.</p>
+              <h2 className="text-2xl font-semibold">Accessibility</h2>
+              <p className="text-md">We welcome all visitors and are committed to offering programs and services that are accessible to everyone..</p>
             </div>
           </div>
 
           <div className="w-full grid grid-cols-[30%_70%]">
-            <MdBrunchDining size={80} className="w-full"/>
+            <MdGroups2 size={80} className="w-full"/>
             <div className="w-full my-auto">
-              <header className="text-2xl font-semibold">Dining</header>
-              <p className="text-md">Choose from a wide menu that includes items for our youngest visitors.</p>
+              <h2 className="text-2xl font-semibold">Membership</h2>
+              <p className="text-md">Enjoy free admission, complimentary guest tickets, invitations to exclusive viewing hours, discounts, and more.</p>
             </div>
           </div>
         </section>
       </article>
+    
     </main>
   )
 }
