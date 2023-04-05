@@ -41,23 +41,24 @@ const Performances = () => {
           </div>
         </section>
 
-        <section className="w-full">
-          <div className="flex space-x-2  text-left w-full text-2xl">
+        <section className="w-full text-left">
+          <div className="flex space-x-2 font-semibold  text-2xl">
             <h1>Today,</h1>
-            <h1 className="italic font-semibold">{getTodaysDate()}</h1>
+            <h1 className="italic">{getTodaysDate()}</h1>
           </div>
           <HorizontalScrollContainer data={performancesData[0]} />
 
-          <div className="flex space-x-2 mt-10 text-left w-full text-2xl">
+          <div className="flex space-x-2 font-semibold mt-16 text-2xl">
             <h1>Tommorow,</h1>
-            <h1 className="italic font-semibold">{getTomorrowsDate()}</h1>
+            <h1 className="italic">{getTomorrowsDate()}</h1>
           </div>
           <HorizontalScrollContainer data={performancesData[1]} />
 
-          <div className="flex space-x-2 mt-10 text-left w-full text-2xl">
-            <h1>Today,</h1>
-            <h1>{getTodaysDate()}</h1>
-          </div>
+
+          <h1 className="font-semibold mt-16 text-2xl">This Month</h1>
+          <HorizontalScrollContainer data={performancesData[2]} />
+
+          <h1 className="font-semibold mt-16 text-2xl">Next Month</h1>
           <HorizontalScrollContainer data={performancesData[2]} />
         </section>
       </article>
