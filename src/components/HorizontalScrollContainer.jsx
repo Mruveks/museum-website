@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-
+import { AiFillRightSquare, AiFillLeftSquare } from 'react-icons/ai'
 const HorizontalScrollContainer = ({ data }) => {
   const containerRef = useRef(null);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -46,18 +46,18 @@ const HorizontalScrollContainer = ({ data }) => {
           </div>
           {scrollLeft === 0 ? null : (
             <button
-              className="absolute top-1/2 -left-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-3 py-6 rounded-full focus:outline-none"
+              className="absolute top-1/2 -left-12 transform -translate-y-1/2 z-10 text-4xl text-black px-3 py-6 rounded-full focus:outline-none"
               onClick={() => handleScroll(-384)}
               disabled={scrollLeft === 0}
             >
-              {"<"}
+              <AiFillLeftSquare className="text-red-600 hover:text-red-400"/>
             </button>
           )}
           {
             scrollLeft > (data.length * 150) ? null :
               
           <button
-          className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-2 py-6 rounded-full focus:outline-none"
+          className="absolute top-1/2 -right-11 transform -translate-y-1/2 z-10 text-4xl text-black px-2 py-6 rounded-full focus:outline-none"
           onClick={() => handleScroll(384)}
           disabled={
             containerRef.current &&
@@ -66,7 +66,7 @@ const HorizontalScrollContainer = ({ data }) => {
             containerRef.current.clientWidth
           }
           >
-            {">"}
+            <AiFillRightSquare className="text-red-600 hover:text-red-400"/>
           </button>
           }
         </div>
