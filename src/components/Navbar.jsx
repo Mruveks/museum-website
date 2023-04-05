@@ -78,7 +78,7 @@ const Navbar = () => {
                 <NavLink to="/exhibitions" className="hover-underline-animation w-full p-2">Events and Tours</NavLink>
                 </li>
                 <li className="hover:bg-red-700 ">
-                <NavLink to="/exhibitions" className="hover-underline-animation w-full p-2">Performances</NavLink>
+                <NavLink to="/events/performances" className="hover-underline-animation w-full p-2">Performances</NavLink>
                 </li>
               </ul>
             </div>

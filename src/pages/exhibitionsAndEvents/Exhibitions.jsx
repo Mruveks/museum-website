@@ -1,5 +1,5 @@
 import React from 'react'
-import {exhibitionsData} from '../components/exhibitionsData.js'
+import { exhibitionsData } from '../../data/exhibitionsData.js'
 import { Helmet } from 'react-helmet'
 
 const Exhibitions = () => {

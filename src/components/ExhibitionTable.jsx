@@ -19,7 +19,7 @@ const ExhibitionTable = ({ data }) => {
         {data.map((exhibition) => (
           <section className="inline-block w-96" key={exhibition.id}>
             <div className="grid pr-8">
-              <img src={exhibition.img} alt={exhibition.title} className="w-auto h-64 object-cover" />
+              <img src={exhibition.img} alt={exhibition.title} className="w-full h-64 object-cover" />
               <div className="whitespace-pre-wrap w-full text-lg font-semibold hover:underline cursor-pointer">{exhibition.title}</div>
               <p className="text-left text-sm">{exhibition.date}</p>
             </div>
