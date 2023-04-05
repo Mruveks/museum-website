@@ -1,10 +1,10 @@
-import React from "react";
-import museumvideo from '../assets/museum-video.mp4';
-import ExhibitionTable from '../components/ExhibitionTable';
-import Card from '../components/Card';
-import { Link } from "react-router-dom";
+import React from "react"
+import museumvideo from '../assets/museum-video.mp4'
+import ExhibitionTable from '../components/ExhibitionTable'
+import Card from '../components/Card'
+import { Link } from "react-router-dom"
 import { Helmet } from 'react-helmet'
-import {exhibitionsData} from '../components/exhibitionsData'
+import { exhibitionsData } from '../data/exhibitionsData'
 
 const Homepage = () => {
 

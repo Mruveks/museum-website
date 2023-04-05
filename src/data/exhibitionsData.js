@@ -1,4 +1,3 @@
-import React from 'react'
 import ex1 from '../assets/ex1.jpg'
 import ex2 from '../assets/ex2.jpg'
 import ex3 from '../assets/ex3.jpg'
