@@ -59,7 +59,7 @@ const Performances = () => {
           <HorizontalScrollContainer data={performancesData[2]} />
 
           <h1 className="font-semibold mt-16 text-2xl">Next Month</h1>
-          <HorizontalScrollContainer data={performancesData[2]} />
+          <HorizontalScrollContainer data={performancesData[3]} />
         </section>
       </article>
     </main>
