@@ -23,7 +23,7 @@ const HorizontalScrollContainer = ({ data }) => {
           >
             {data.map((exhibition) => (
               <section className="inline-block w-96" key={exhibition.id}>
-                <div className="grid mr-8 h-96 rounded-md hover:shadow-xl p-2 shadow-lg">
+                <div className="grid mx-8 mb-8 h-96 rounded-md hover:shadow-xl p-2 shadow-lg">
                   <img
                     src={exhibition.img}
                     alt={exhibition.title}
