@@ -1,20 +1,22 @@
-import React from "react"
-import museumvideo from '../assets/museum-video.mp4'
-import ExhibitionTable from '../components/ExhibitionTable'
-import Card from '../components/Card'
-import { Link } from "react-router-dom"
-import { Helmet } from 'react-helmet'
-import { exhibitionsData } from '../data/exhibitionsData'
+import React from "react";
+import museumvideo from "../assets/museum-video.mp4";
+import HorizontalScrollContainer from "../components/HorizontalScrollContainer";
+import Card from "../components/Card";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { exhibitionsData } from "../data/exhibitionsData";
 
 const Homepage = () => {
-
   return (
     <div>
       <Helmet>
         <title>The Museum</title>
-        <meta name="description" content="Explore exhibition gallery guides, videos, articles, and more at The Museum." />
+        <meta
+          name="description"
+          content="Explore exhibition gallery guides, videos, articles, and more at The Museum."
+        />
       </Helmet>
-      
+
       <article className="relative h-screen overflow-hidden">
         <span className="absolute inset-0">
           <video
@@ -40,12 +42,21 @@ const Homepage = () => {
       <article className="container pt-16 space-y-4">
         <header className="text-6xl font-bold">Now On View</header>
         <div className="grid grid-cols-2 text-xl mb-4 font-semibold">
-          <h2>Explore exhibition gallery guides, videos, articles, and more.</h2>
+          <h2>
+            Explore exhibition gallery guides, videos, articles, and more.
+          </h2>
           <div className="w-full text-right">
-            <Link to="/exhibitions" preventScrollReset={false} relative="path" className="hover-underline-animation-black cursor-pointer">View all exhibitions</Link>
+            <Link
+              to="/exhibitions"
+              preventScrollReset={false}
+              relative="path"
+              className="hover-underline-animation-black cursor-pointer"
+            >
+              View all exhibitions
+            </Link>
           </div>
         </div>
-        <ExhibitionTable data={exhibitionsData} />
+        <HorizontalScrollContainer data={exhibitionsData} />
         <Card />
       </article>
     </div>
