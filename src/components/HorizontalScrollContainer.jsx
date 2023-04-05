@@ -13,8 +13,6 @@ const HorizontalScrollContainer = ({ data }) => {
     setScrollLeft(scrollLeft + scrollOffset);
   };
 
-  var limit = Math.max()
-
   return (
     <article className="relative">
       {data.length != 13 ? (
@@ -24,8 +22,8 @@ const HorizontalScrollContainer = ({ data }) => {
             className="overflow-x-hidden whitespace-nowrap py-4 scroll-hidden text-left"
           >
             {data.map((exhibition) => (
-              <section className="inline-block w-96" key={exhibition.id}>
-                <div className="grid mx-8 mb-8 h-96 rounded-md hover:shadow-xl p-2 shadow-lg">
+              <section className="inline-block w-1/3" key={exhibition.id}>
+                <div className="grid mx-8 mb-8 h-[25rem] rounded-md hover:shadow-xl p-2 shadow-lg">
                   <img
                     src={exhibition.img}
                     alt={exhibition.title}
@@ -34,10 +32,14 @@ const HorizontalScrollContainer = ({ data }) => {
                   <div className="whitespace-pre-wrap w-full text-lg font-semibold hover:underline cursor-pointer">
                     {exhibition.title}
                   </div>
-                  <div className="flex w-full items-center justify-between ">
-                    <p>{exhibition.date}</p>
-                    <button className="mx-4 p-4 border bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit text-white font-semibold rounded-lg">
-                      Buy Now!
+                  <div className="grid grid-cols-2 w-full items-center justify-between ">
+                    <div className="flex flex-col">
+                      <p>{exhibition.date}</p>
+                      <p>{exhibition.hour}</p>
+                    </div>
+                
+                    <button className="justify-self-center p-4 border  bg-gradient-to-r from-red-800 to-red-600 hover:to-yellow-400 w-fit text-white font-semibold rounded-lg">
+                      Join Now!
                     </button>
                   </div>
                 </div>
@@ -47,7 +49,7 @@ const HorizontalScrollContainer = ({ data }) => {
           {scrollLeft === 0 ? null : (
             <button
               className="absolute top-1/2 -left-12 transform -translate-y-1/2 z-10 text-4xl text-black px-3 py-6 rounded-full focus:outline-none"
-              onClick={() => handleScroll(-384)}
+              onClick={() => handleScroll(-430)}
               disabled={scrollLeft === 0}
             >
               <AiFillLeftSquare className="text-red-600 hover:text-red-400"/>
@@ -58,7 +60,7 @@ const HorizontalScrollContainer = ({ data }) => {
               
           <button
           className="absolute top-1/2 -right-11 transform -translate-y-1/2 z-10 text-4xl text-black px-2 py-6 rounded-full focus:outline-none"
-          onClick={() => handleScroll(384)}
+          onClick={() => handleScroll(430)}
           disabled={
             containerRef.current &&
             scrollLeft ===

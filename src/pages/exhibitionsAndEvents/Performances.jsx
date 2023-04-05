@@ -42,15 +42,15 @@ const Performances = () => {
         </section>
 
         <section className="w-full text-left">
-          <div className="flex space-x-2 font-semibold  text-2xl">
+          <div className="flex space-x-2  text-2xl">
             <h1>Today,</h1>
-            <h1 className="italic">{getTodaysDate()}</h1>
+            <h1 className="italic font-semibold">{getTodaysDate()}</h1>
           </div>
           <HorizontalScrollContainer data={performancesData[0]} />
 
-          <div className="flex space-x-2 font-semibold mt-16 text-2xl">
+          <div className="flex space-x-2 mt-16 text-2xl">
             <h1>Tommorow,</h1>
-            <h1 className="italic">{getTomorrowsDate()}</h1>
+            <h1 className="italic font-semibold">{getTomorrowsDate()}</h1>
           </div>
           <HorizontalScrollContainer data={performancesData[1]} />
 
