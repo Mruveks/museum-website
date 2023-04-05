@@ -11,7 +11,7 @@ import { BecomeAMember, BuyTickets, FoodAndDrink, PlanYourVisit, Accessibility }
 function App() {
 
   return (
-    <div className="text-black">
+    <div className="text-black w-screen">
       <Navbar />
 
       <Routes>

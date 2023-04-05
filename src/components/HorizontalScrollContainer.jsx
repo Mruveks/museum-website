@@ -13,6 +13,8 @@ const HorizontalScrollContainer = ({ data }) => {
     setScrollLeft(scrollLeft + scrollOffset);
   };
 
+  var limit = Math.max()
+
   return (
     <article className="relative">
       {data.length != 13 ? (
@@ -51,18 +53,22 @@ const HorizontalScrollContainer = ({ data }) => {
               {"<"}
             </button>
           )}
+          {
+            scrollLeft > (data.length * 150) ? null :
+              
           <button
-            className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-2 py-6 rounded-full focus:outline-none"
-            onClick={() => handleScroll(384)}
-            disabled={
-              containerRef.current &&
-              scrollLeft ===
-                containerRef.current.scrollWidth -
-                  containerRef.current.clientWidth
-            }
+          className="absolute top-1/2 -right-10 transform -translate-y-1/2 z-10 text-4xl text-black hover:text-red-600 px-2 py-6 rounded-full focus:outline-none"
+          onClick={() => handleScroll(384)}
+          disabled={
+            containerRef.current &&
+            scrollLeft ===
+            containerRef.current.scrollWidth -
+            containerRef.current.clientWidth
+          }
           >
             {">"}
           </button>
+          }
         </div>
       ) : (
         <div>
